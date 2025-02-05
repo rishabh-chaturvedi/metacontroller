@@ -13,6 +13,7 @@ function(request) {
         labels: {app: "service-per-pod"}
       },
       spec: {
+        type: "NodePort",
         selector: {
           [labelKey]: statefulset.metadata.name + "-" + index
         },
